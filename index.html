@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="Ora6ft2cL2SmZJywSyczsuvonUngBzGaqV7rtI1G">
+    <title>Парк Zамания в Москве</title>
+    <link rel="shortcut icon" type="image/png" href="zamania/images/favicon-32x32.png">
+
+    <link href="https://db.onlinewebfonts.com/c/6c57137143c22c4d0f12c10fe5967858?family=Shadow" rel="stylesheet"
+          type="text/css"/>
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="header">
+    <a href="#" class="main-logo">
+        <img src="./images/main-logo.svg" alt="main-logo">
+    </a>
+    <div class="app-call">
+        <a href="tel:+7 495 120-40-68" class="app-call__number">
+            8 495 120-40-68
+        </a>
+        <span class="app-call__book js-feedback-toggle"> Заказать звонок </span>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="main-bg">
+        <div class="container">
+            <div class="main-bg__content">
+                <img src="./images/main-bg@2x2.jpg" alt="main-bg">
+            </div>
+        </div>
+        <div class="main-bg__blue"></div>
+        <div class="main-bg__red"></div>
+    </div>
+
+    <div class="container">
+        <div class="booking-form booking-form--indent-top">
+            <p class="booking-form__text booking-form__text--sm text-monospace text-uppercase">
+                Семейные парки в ТЦ Москвы
+            </p>
+
+            <h1 class="booking-form__title">
+                Улетные Вечеринки весь день! Успей купить билет на праздник!
+            </h1>
+
+            <p class="booking-form__text">
+                Оставь заявку и получи полное описание всех праздников
+            </p>
+
+            <form class="js-zayavka">
+                <input type="tel" required="true" name="phone" autocomplete="off" class="booking-form__input phone-mask"
+                       placeholder="Введите WhatsApp номер">
+
+                <button type="submit" class="booking-form__btn">
+                    Получить расписание и прайс
+                </button>
+            </form>
+
+            <a href="#" class="booking-form__btn booking-form__btn--link">
+                Купить билет
+            </a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            Оставляя контактную информацию, вы <a href="#">соглашаетесь</a> на обработку персональных данных
+        </div>
+    </footer>
+</div>
+<div class="modal-view">
+    <div class="modal-view-content">
+        <h1>Заказать звонок</h1>
+
+        <div class="modal-view-close js-feedback-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18">
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M1 1l16 16"></path>
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M17 1L1 17"></path>
+            </svg>
+        </div>
+
+        <form class="booking-form booking-form--indent-top js-zayavka">
+            <input type="tel" name="phone" required="true" class="booking-form__input-custom phone-mask"
+                   placeholder="Ваш телефон*">
+
+            <button type="submit" class="booking-form__btn">
+                Отправить заявку
+            </button>
+
+            <button type="button" class="booking-form__btn booking-form__btn--link js-feedback-toggle">
+                Закрыть
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js" defer></script>
+<script src="js/jquery.mask.min.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media (min-width: 414px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.wrapper.modal-view--open {
+    display: none;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.main-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.main-bg .main-bg__blue {
+    background-color: #96d4e3;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.main-bg .main-bg__red {
+    background-color: #e5939b;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    right: 0;
+}
+
+.main-bg__content img{
+    width: 100%;
+}
+
+
+@media (min-width: 414px) {
+    .main-bg__content {
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+@media (min-width: 414px) {
+    .header {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+
+.footer {
+    text-align: center;
+    color: #8d4646;
+    font-size: 7px;
+    line-height: 10px;
+    margin: 10px 0;
+}
+
+.footer a {
+    margin-top: 10px;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.main-logo {
+    display: inline-flex;
+}
+
+.main-logo img {
+    width: 150px;
+}
+
+.app-call {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-call__book {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fdc035;
+    line-height: 17px;
+    border-bottom: 2px dotted #fdc035;
+    cursor: pointer;
+    text-align: center;
+}
+
+.app-call__number {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2928;
+}
+
+.booking-form {
+    max-width: 100%;
+    border-radius: 28px;
+    background-color: #c30000;
+    color: #f8f7f6;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 8px;
+}
+
+.booking-form--indent-top {
+    margin-top: 141px;
+}
+
+@media (min-width: 414px) {
+    .booking-form {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .booking-form--indent-top {
+        padding: 10px 16px;
+        margin-top: 220px;
+    }
+}
+
+@media (min-width: 414px) {
+    .booking-form {
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 16px;
+    }
+}
+
+
+.booking-form__title {
+    font-family: Shadow, sans-serif;
+    font-size: 22px;
+    letter-spacing: -0.86px;
+    line-height: 24px;
+    margin: 16px 0 12px;
+    font-weight: normal;
+}
+
+@media (min-width: 414px) {
+    .booking-form__title {
+        font-size: 25px;
+        line-height: 32px;
+        margin-top: 40px;
+    }
+}
+
+.booking-form__input, .booking-form__input-custom {
+    width: 100%;
+    background: transparent;
+    height: 48px;
+    border-radius: 28px;
+    border: 1px solid #dbd9d7;
+    text-align: center;
+    color: #dbd9d7;
+    padding: 0 25px;
+    margin: 16px 0;
+}
+
+@media (min-width: 414px) {
+    .booking-form__input {
+        margin: 32px 0 16px;
+    }
+}
+
+.booking-form__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #dbd9d7;
+    font-size: 14px;
+}
+.booking-form__input::-moz-placeholder { /* Firefox 19+ */
+    color: #dbd9d7;
+    font-size: 14px;
+}
+.booking-form__input:-ms-input-placeholder { /* IE 10+ */
+    color: #dbd9d7;
+    font-size: 14px;
+}
+.booking-form__input:-moz-placeholder { /* Firefox 18- */
+    color: #dbd9d7;
+    font-size: 14px;
+}
+
+.booking-form__btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Shadow, sans-serif;
+    min-height: 48px;
+    border-radius: 28px;
+    background-color: #fdc035;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+
+@media (min-width: 360px) {
+    .booking-form__btn {
+        font-size: 16px;
+    }
+}
+
+.booking-form__btn--link {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #fdc035;
+}
+
+
+.booking-form__text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #f8f7f6;
+    line-height: 16px;
+}
+
+@media (min-width: 414px) {
+    .booking-form__text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.booking-form__text--sm {
+    font-size: 9px;
+}
+
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-monospace {
+    letter-spacing: 4px;
+}
+
+@media (min-width: 414px) {
+    .text-monospace {
+        letter-spacing: 5px;
+    }
+
+    .booking-form__text--sm {
+        font-size: 10px;
+    }
+}
+
+
+.modal-view {
+    display: flex;
+    min-height: 400px;
+    transform: translateX(-100%);
+    opacity: 0;
+    padding: .9rem;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 10;
+    transition: transform ease-in-out 350ms, opacity ease-in-out 400ms;
+}
+
+.modal-view.modal-view--open {
+    transform: translateX(0);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.modal-view .modal-view-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-view .modal-view-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-view .modal-view-close {
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal-view .modal-view-content h1 {
+    width: 100%;
+    display: block;
+    font-weight: 800;
+    text-align: center;
+    color: #fdc035;
+    font-size: 2rem;
+}
+
+.modal-view .modal-view-content .modal-view-close {
+    top: 0;
+    right: 0
+}
+
+.modal-view .modal-view-content .booking-form {
+    background: transparent;
+    margin-top: 0;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-view .modal-view-content .booking-form__input {
+    height: 56px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.modal-view .modal-view-content .booking-form__btn {
+    min-height: 56px;
+}
+
+.modal-view .modal-view-content .booking-form__input::placeholder { /* Chrome/Opera/Safari */
+    color: #a7a5a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal-view .modal-view-content .booking-form__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #a7a5a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal-view .modal-view-content .booking-form__input::-moz-placeholder { /* Firefox 19+ */
+    color: #a7a5a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal-view .modal-view-content .booking-form__input:-ms-input-placeholder { /* IE 10+ */
+    color: #a7a5a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal-view .modal-view-content .booking-form__input:-moz-placeholder { /* Firefox 18- */
+    color: #a7a5a0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .modal-view .modal-view-content form {
+        margin-left: 0;
+        margin-right: 0;
+        margin-right: auto
+    }
+}
+
+.success-block {
+    width: 250px;
+    min-height: 250px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #2a2928;
+    font-family: Montserrat, sans-serif;
+}
+
+.success-block p {
+    font-size: 12px;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 6px;
+    line-height: 16px;
+    text-align: left;
+    opacity: .7;
+}
+
+.success-block h1 {
+    color: #fdc035;
+    font-family: Shadow, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.3px;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 8px;
+}
